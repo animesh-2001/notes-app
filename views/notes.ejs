@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h2>NOTES LIST</h2>
+    
+        <% temp.forEach((item)=>{%>
+            <form action="/delete" method="POST" class="posting">
+            <input type="checkbox" name="checkbox" value="<%=item.id%>" onChange="this.form.submit()">
+                 <label><%=item.name%></label>
+                 </form>
+       <% })%>
+       
+    
+    <form action="/" method="POST">
+        <input type="text" name="add" autocomplete="off" placeholder="add your new item">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
